@@ -1,0 +1,36 @@
+{% block content %}
+    <h1>{{ publicacion.titulo }}</h1>
+    <p>{{ publicacion.contenido }}</p>
+
+    <h2>Comentarios</h2>
+    <!--{% if publicacion.comentarios.count > 0 %}
+        <ul>
+            {% for comentario in publicacion.comentarios.all %}
+                <li>{{ comentario.texto }} - {{ comentario.autor.username }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay comentarios</p>
+    {% endif %}-->
+
+    {% if errors %}
+        <ul>
+            {% for field, errors in errors.items %}
+                <li>{{ field }}:
+                <ul>
+                    {% for error in errors %}
+                        <li>{{ error.message }}</li>
+                    {% endfor %}
+                </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <h3>Agregar comentario</h3>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <button type="submit">Comentar</button>
+  </form>
+{% endblock %}

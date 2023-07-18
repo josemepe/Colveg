@@ -1,0 +1,12 @@
+{% for products in product %}
+  <h1>{{ products.name }}</h1>
+  <img src="{{ object.image.url }}" alt="imagen">
+  <p>{{ products.descrip }}</p>
+  <p>Peso: {{ products.peso }} {{ products.unidad_peso }}</p>
+  <p>Precio: ${{ products.price }}</p>
+  <p>Direccion :{{ products.direccion }}</p>
+  <p>Fecha: {{ products.fecha }}</p>
+  <br />
+  <h1>Comentario</h1>
+  <p>{{comentario.autor.username}} &middot; {{comentario}}
+{% endfor %}

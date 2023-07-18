@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Iniciar sesión</title>
+</head>
+<body>
+	<h1>Iniciar sesión</h1>
+	{% if error_message %}
+		<p>{{ error_message }}</p>
+	{% endif %}
+	<form method="post" action="{% url 'login' %}">
+		{% csrf_token %}
+		<label for="email">Correo electrónico:</label>
+		<input type="email" name="email" required>
+		<label for="password_login">Contraseña:</label>
+		<input type="password" name="password_login" required>
+		<input type="submit" value="Iniciar sesión">
+	</form>
+</body>
+</html>

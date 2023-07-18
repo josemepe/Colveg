@@ -1,0 +1,21 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Restablecer contraseña</title>
+</head>
+<body>
+    <h1>Restablecer contraseña</h1>
+    {% if error_message %}
+        <p style="color: red">{{ error_message }}</p>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <label for="text">Ingresar contrsañe:</label>
+        <input type="password" name="password1" id="password1" required>
+        <br>
+        <label for="text">Ingresar confirmacion de contraseña:</label>
+        <input type="password" name="password2" id="password2" required>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

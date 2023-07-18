@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "696273535872",
+    "firebase_url": "https://colveg-67dae-default-rtdb.firebaseio.com",
+    "project_id": "colveg-67dae",
+    "storage_bucket": "colveg-67dae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696273535872:android:02a26399545a310f9d3765",
+        "android_client_info": {
+          "package_name": "com.example.colveg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696273535872-mhrdb4j6mhnctgfh2qg3349pn1r5tltj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwxegE9Iy-0KWD3Lcw2iukaNBf7ZFmQ_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696273535872-mhrdb4j6mhnctgfh2qg3349pn1r5tltj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "696273535872-g8mb3kl5iv12174gc0lgc6v5t0ckf2t1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.colveg"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696273535872:android:62b48636b11dd9859d3765",
+        "android_client_info": {
+          "package_name": "com.example.crud_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696273535872-mhrdb4j6mhnctgfh2qg3349pn1r5tltj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwxegE9Iy-0KWD3Lcw2iukaNBf7ZFmQ_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696273535872-mhrdb4j6mhnctgfh2qg3349pn1r5tltj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "696273535872-g8mb3kl5iv12174gc0lgc6v5t0ckf2t1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.colveg"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

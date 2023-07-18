@@ -1,0 +1,11 @@
+{% block title %} Home {% endblock title %}
+{% block content %}
+    {% if user.is_authenticated %}
+        Hola {{ user.name}}
+        <p><a href="{% url 'logout' %}">Log out</a></p>
+    {% else %}
+        <p>No estás logueado</p>
+        <a href="{% url 'login' %}">Log in</a>
+        <a href="{% url 'registration' %}">Sign up</a>
+    {% endif %}
+{% endblock content %}

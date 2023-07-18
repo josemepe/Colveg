@@ -1,0 +1,11 @@
+{% block content %}
+  <h1>Crear una cuenta</h1>
+  <form method="post">
+    {% if error_message %}
+		    <p>{{ error_message }}</p>
+	    {% endif %}
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Registrarse</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% block content %}
+  <h1>Productos publicados</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Imagen</th>
+        <th>Precio</th>
+        <th>Editar</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for product in products %}
+        <tr>
+          <td>{{ product.name }}</td>
+          <td>{{ product.description }}</td>
+          <td><img src="{{ product.image_url}}"></td>
+          <td>{{ product.price }}</td>
+          <td>{% if product.pk %}
+            <form method="get" action="{% url 'editar' pk=product.pk %}">
+              <button type="submit">Editar</button>
+            </form>
+
+            <form method="get" action="{% url 'borrar' pk=product.pk %}">
+              <button type="submit">eliminar</button>
+            </form>
+
+            <form method="get" action="{% url 'comentario' pk=product.pk %}">
+              <button type="submit">Comentar</button>
+            </form>
+
+          {% endif %}</td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="5">No hay productos publicados</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% block content %}
+    <h1>Borrar Producto</h1>
+    <form enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">confirmar</button>
+    </form>
+{% endblock content %}

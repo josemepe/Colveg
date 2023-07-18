@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Verificar codigos</title>
+</head>
+<body>
+	<h1>Verificar codigos</h1>
+	{% if error_message %}
+		<p>{{ error_message }}</p>
+	{% endif %}
+	<form method="post" action="{% url 'verificar' %}">
+		{% csrf_token %}
+		<label for="code">codigo del correo electrónico:</label>
+		<input type="text" name="code_email" required>
+		<label for="code">codigo del telefono:</label>
+		<input type="text" name="code_phone" required>
+		<input type="submit" value="Verificar">
+	</form>
+</body>
+</html>
+
+    
